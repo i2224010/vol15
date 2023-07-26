@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <title>Leon Ukechi ポートフォリオ</title>
+
+  <link href="css/style.css" media="all" rel="stylesheet" type="text/css" />
+
+  <style>
+    /* Add custom CSS to center-align text and hide all images except the first one */
+    .article-body {
+      text-align: center;
+    }
+
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+
+    .slide {
+      display: none;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- header -->
+    <header class="header ">
+      <div class="container">
+        <h1 class="header-logo">
+          <a>Leon Ukechi</a>
+        </h1> <!-- Close the 'h1' tag -->
+      </div>
+    </header>
+    <!-- /header -->
+
+    <main class="content">
+
+      <article class="article">
+        <div class="article-container">
+          <h2 class="article-title">Hi-νガンダム</h2>
+          <div class="article-body">
+
+            <!-- Slideshow container -->
+            <div class="slideshow-container">
+              <!-- First slide -->
+              <div class="slide">
+                <img src="img/pf_xwing03.png" alt="">
+              </div>
+
+              <div class="slide">
+                <img src="img/pf_xwing01.png" alt="">
+              </div>
+
+              <div class="slide">
+                <img src="img/pf_xwing02.png" alt="">
+              </div>
+            </div>
+
+            <h3>作品名　Xウィング</h3>
+            <h3>制作期間</h3>
+            <p>約4ヶ月</p>
+            <br>
+            <h3>ジャンル</h3>
+            <p>3DCG</p>
+            <br>
+            <h3>解説</h3>
+            <p>スターウォーズシリーズに登場する戦闘機の3DCGモデルです。<br>
+              blenderで初めて作った作品です。<br>
+              制作当時はフォトリアルCGを制作する技量がなかったのでCGアニメシリーズに寄せた外見になりました。<br>
+              機体後方のディテールや焼け跡の再現がこだわった点です。</p>
+          </div>
+          <br>
+          <div class="home-link">
+            <a href="index.html">Works一覧へ</a>
+          </div>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <script>
+    // JavaScript for slideshow functionality
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 5000); 
+    }
+  </script>
+</body>
+</html>
